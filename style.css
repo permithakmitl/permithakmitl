@@ -1265,3 +1265,246 @@ button {
   margin: 0 auto;
   font-size: 15px;
 }
+
+/* ===================================
+   LANGUAGE SWITCHER
+   =================================== */
+.lang-switcher-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.lang-switcher-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  line-height: 1;
+  padding: 0;
+  transition: var(--transition);
+}
+
+.lang-switcher-btn:hover {
+  border-color: var(--orange);
+  background: var(--orange-pale);
+}
+
+.lang-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  z-index: 1001;
+  min-width: 170px;
+  overflow: hidden;
+}
+
+.lang-dropdown.open {
+  display: block;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  color: var(--black);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: left;
+}
+
+.lang-option:hover {
+  background: var(--orange-pale);
+  color: var(--orange);
+}
+
+.lang-flag-small {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .lang-switcher-wrapper {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  .mobile-lang-switcher {
+    display: flex;
+    gap: 8px;
+    padding: 12px 0;
+  }
+
+  .mobile-lang-switcher button {
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .mobile-lang-switcher button:hover,
+  .mobile-lang-switcher button.active {
+    background: var(--orange);
+    color: var(--white);
+    border-color: var(--orange);
+  }
+}
+
+/* ===================================
+   LOGO FRAMES (above About section)
+   =================================== */
+.logo-frames {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.logo-frame {
+  width: 140px;
+  height: 140px;
+  border-radius: var(--radius-md);
+  border: 2px dashed var(--border);
+  background: var(--gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 12px;
+}
+
+@media (max-width: 768px) {
+  .logo-frames {
+    gap: 20px;
+  }
+
+  .logo-frame {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* ===================================
+   PHOTO GALLERY (horizontal scroll)
+   =================================== */
+.photo-gallery {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+}
+
+.photo-gallery .scroll-btn {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 40px;
+  background: rgba(0, 0, 0, 0.08);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: var(--transition);
+  color: var(--gray-text);
+  font-size: 1.4rem;
+}
+
+.photo-gallery .scroll-btn:hover {
+  background: rgba(0, 0, 0, 0.15);
+  color: var(--black);
+}
+
+.photo-gallery .scroll-btn-left {
+  left: 0;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.photo-gallery .scroll-btn-right {
+  right: 0;
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+
+.photo-gallery-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  border-radius: var(--radius-sm);
+}
+
+.photo-gallery-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.photo-gallery-row {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  padding: 8px 0;
+}
+
+.photo-gallery-item {
+  width: 200px;
+  height: 150px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background: var(--gray-light);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.photo-gallery-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.photo-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .photo-gallery-item {
+    width: 160px;
+    height: 120px;
+  }
+
+  .photo-gallery .scroll-btn {
+    width: 30px;
+    font-size: 1.1rem;
+  }
+}

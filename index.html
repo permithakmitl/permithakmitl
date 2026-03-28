@@ -13,70 +13,92 @@
     <div class="container">
       <a href="index.html" class="navbar-brand">PERMITHA KMITL</a>
       <div class="nav-links">
-        <a href="index.html">About</a>
-        <a href="https://www.kmitl.ac.th/" target="_blank" rel="noopener noreferrer">Campus</a>
+        <a href="index.html" data-i18n="nav.about">Tentang Kami</a>
         <div class="nav-dropdown">
-          <a href="info-scholarship.html" class="nav-dropdown-trigger">Info &amp; Scholarship</a>
+          <a href="info-scholarship.html" class="nav-dropdown-trigger" data-i18n="nav.info">Info &amp; Beasiswa</a>
           <div class="nav-dropdown-menu">
-            <a href="info-scholarship.html#admission">Admission</a>
-            <a href="info-scholarship.html#scholarship">Scholarship</a>
-            <a href="info-scholarship.html#faculty">Faculty &amp; Department</a>
-            <a href="info-scholarship.html#downloads">Downloadable Files</a>
-            <a href="info-scholarship.html#faq">FAQ</a>
+            <a href="info-scholarship.html#admission" data-i18n="dropdown.admission">Pendaftaran</a>
+            <a href="info-scholarship.html#scholarship" data-i18n="dropdown.scholarship">Beasiswa</a>
+            <a href="info-scholarship.html#faculty" data-i18n="dropdown.faculty">Fakultas &amp; Jurusan</a>
+            <a href="info-scholarship.html#downloads" data-i18n="dropdown.downloads">Berkas Unduhan</a>
+            <a href="info-scholarship.html#faq" data-i18n="dropdown.faq">FAQ</a>
           </div>
         </div>
-        <a href="news.html">News</a>
+        <a href="news.html" data-i18n="nav.news">Berita</a>
+        <a href="https://www.kmitl.ac.th/" target="_blank" rel="noopener noreferrer" data-i18n="nav.campus">Kampus Kami</a>
+        <div class="lang-switcher-wrapper">
+          <button class="lang-switcher-btn" onclick="toggleLangDropdown(event)" aria-label="Change language">
+            <span id="active-flag">🇮🇩</span>
+          </button>
+          <div class="lang-dropdown" id="lang-dropdown">
+            <button class="lang-option" onclick="switchLanguage('id')"><span class="lang-flag-small">🇮🇩</span> Bahasa Indonesia</button>
+            <button class="lang-option" onclick="switchLanguage('en')"><span class="lang-flag-small">🇺🇸</span> English</button>
+            <button class="lang-option" onclick="switchLanguage('th')"><span class="lang-flag-small">🇹🇭</span> ภาษาไทย</button>
+          </div>
+        </div>
       </div>
       <button class="hamburger" aria-label="Open menu">☰</button>
     </div>
     <div class="mobile-menu">
-      <a href="index.html">About</a>
-      <a href="https://www.kmitl.ac.th/" target="_blank" rel="noopener noreferrer">Campus</a>
-      <a href="#" class="mobile-dropdown-toggle">Info &amp; Scholarship</a>
+      <a href="index.html" data-i18n="nav.about">Tentang Kami</a>
+      <a href="#" class="mobile-dropdown-toggle" data-i18n="nav.info">Info &amp; Beasiswa</a>
       <div class="mobile-dropdown-items">
-        <a href="info-scholarship.html#admission">Admission</a>
-        <a href="info-scholarship.html#scholarship">Scholarship</a>
-        <a href="info-scholarship.html#faculty">Faculty &amp; Department</a>
-        <a href="info-scholarship.html#downloads">Downloadable Files</a>
-        <a href="info-scholarship.html#faq">FAQ</a>
+        <a href="info-scholarship.html#admission" data-i18n="dropdown.admission">Pendaftaran</a>
+        <a href="info-scholarship.html#scholarship" data-i18n="dropdown.scholarship">Beasiswa</a>
+        <a href="info-scholarship.html#faculty" data-i18n="dropdown.faculty">Fakultas &amp; Jurusan</a>
+        <a href="info-scholarship.html#downloads" data-i18n="dropdown.downloads">Berkas Unduhan</a>
+        <a href="info-scholarship.html#faq" data-i18n="dropdown.faq">FAQ</a>
       </div>
-      <a href="news.html">News</a>
+      <a href="news.html" data-i18n="nav.news">Berita</a>
+      <a href="https://www.kmitl.ac.th/" target="_blank" rel="noopener noreferrer" data-i18n="nav.campus">Kampus Kami</a>
+      <div class="mobile-lang-switcher">
+        <button onclick="switchLanguage('id')">🇮🇩 ID</button>
+        <button onclick="switchLanguage('en')">🇺🇸 EN</button>
+        <button onclick="switchLanguage('th')">🇹🇭 TH</button>
+      </div>
     </div>
   </nav>
 
   <main>
     <!-- HERO -->
     <section class="hero">
-      <h1>Selamat Datang di PERMITHA KMITL</h1>
-      <p class="hero-sub">Indonesian Students Association in Thailand · Chapter KMITL</p>
+      <h1 data-i18n="hero.title">Selamat Datang di PERMITHA KMITL</h1>
+      <p class="hero-sub" data-i18n="hero.sub">Perhimpunan Pelajar Indonesia di Thailand · Simpul KMITL</p>
       <div class="hero-buttons">
-        <a href="https://www.kmitl.ac.th/" target="_blank" rel="noopener noreferrer" class="btn btn-outlined">Explore Campus</a>
-        <a href="info-scholarship.html" class="btn btn-filled">Info &amp; Scholarship</a>
+        <a href="#about" class="btn btn-filled" data-i18n="hero.cta">Kenali Kami</a>
       </div>
       <div class="orange-line"></div>
     </section>
 
     <!-- ABOUT -->
-    <section class="about">
+    <section id="about" class="about">
+      <div class="logo-frames fade-in">
+        <div class="logo-frame">
+          <img src="images/logo-permitha.png" alt="Logo PERMITHA">
+        </div>
+        <div class="logo-frame">
+          <img src="images/logo-permitha-kmitl.png" alt="Logo PERMITHA KMITL">
+        </div>
+      </div>
       <div class="about-grid">
         <div class="about-text fade-in">
-          <span class="eyebrow">TENTANG KAMI</span>
-          <h2>Apa itu PERMITHA?</h2>
-          <p>PERMITHA (Perhimpunan Pelajar Indonesia di Thailand) adalah organisasi resmi mahasiswa Indonesia di Thailand yang bernaung di bawah Kedutaan Besar Republik Indonesia di Bangkok. PERMITHA KMITL adalah simpul yang berlokasi di King Mongkut's Institute of Technology Ladkrabang — salah satu institusi teknologi terkemuka di Thailand.</p>
-          <p>Kami hadir sebagai keluarga bagi mahasiswa Indonesia di KMITL: tempat bertanya, berbagi, berkolaborasi, dan tetap merasakan kehangatan rumah di tanah perantauan.</p>
+          <span class="eyebrow" data-i18n="about.eyebrow">TENTANG KAMI</span>
+          <h2 data-i18n="about.title">Apa itu PERMITHA?</h2>
+          <p data-i18n="about.p1">PERMITHA (Perhimpunan Pelajar Indonesia di Thailand) adalah organisasi resmi mahasiswa Indonesia di Thailand yang bernaung di bawah Kedutaan Besar Republik Indonesia di Bangkok. PERMITHA KMITL adalah simpul yang berlokasi di King Mongkut's Institute of Technology Ladkrabang — salah satu institusi teknologi terkemuka di Thailand.</p>
+          <p data-i18n="about.p2">Kami hadir sebagai keluarga bagi mahasiswa Indonesia di KMITL: tempat bertanya, berbagi, berkolaborasi, dan tetap merasakan kehangatan rumah di tanah perantauan.</p>
         </div>
         <div class="stat-cards fade-in">
           <div class="stat-card">
-            <div class="stat-card-title">🇮🇩 Indonesian Chapter</div>
-            <div class="stat-card-sub">Simpul KMITL, Bangkok</div>
+            <div class="stat-card-title" data-i18n="about.stat1.title">🇮🇩 Indonesian Chapter</div>
+            <div class="stat-card-sub" data-i18n="about.stat1.sub">Simpul KMITL, Bangkok</div>
           </div>
           <div class="stat-card">
-            <div class="stat-card-title">📍 Bangkok, Thailand</div>
-            <div class="stat-card-sub">Ladkrabang District</div>
+            <div class="stat-card-title" data-i18n="about.stat2.title">📍 Bangkok, Thailand</div>
+            <div class="stat-card-sub" data-i18n="about.stat2.sub">Distrik Ladkrabang</div>
           </div>
           <div class="stat-card">
-            <div class="stat-card-title">🎓 Aktif &amp; Berkembang</div>
-            <div class="stat-card-sub">Bergabunglah bersama kami</div>
+            <div class="stat-card-title" data-i18n="about.stat3.title">🎓 Aktif &amp; Berkembang</div>
+            <div class="stat-card-sub" data-i18n="about.stat3.sub">Bergabunglah bersama kami</div>
           </div>
         </div>
       </div>
@@ -85,30 +107,49 @@
     <!-- WHAT WE DO -->
     <section class="what-we-do">
       <div class="what-we-do-header">
-        <span class="eyebrow">APA YANG KAMI LAKUKAN</span>
-        <h2>Apa yang Kami Lakukan?</h2>
+        <span class="eyebrow" data-i18n="wwd.eyebrow">APA YANG KAMI LAKUKAN</span>
+        <h2 data-i18n="wwd.title">Apa yang Kami Lakukan?</h2>
         <div class="orange-line-sm"></div>
       </div>
+
+      <!-- Activity Photo Gallery -->
+      <div class="photo-gallery">
+        <button class="scroll-btn scroll-btn-left" onclick="scrollPhotos('wwd-photos', -1)" aria-label="Scroll left"><span>&#10094;</span></button>
+        <div class="photo-gallery-wrapper" id="wwd-photos">
+          <div class="photo-gallery-row">
+            <div class="photo-gallery-item"><img src="images/activity-1.jpg" alt="Activity 1"></div>
+            <div class="photo-gallery-item"><img src="images/activity-2.jpg" alt="Activity 2"></div>
+            <div class="photo-gallery-item"><img src="images/activity-3.jpg" alt="Activity 3"></div>
+            <div class="photo-gallery-item"><img src="images/activity-4.jpg" alt="Activity 4"></div>
+            <div class="photo-gallery-item"><img src="images/activity-5.jpg" alt="Activity 5"></div>
+            <div class="photo-gallery-item"><img src="images/activity-6.jpg" alt="Activity 6"></div>
+            <div class="photo-gallery-item"><img src="images/activity-7.jpg" alt="Activity 7"></div>
+            <div class="photo-gallery-item"><img src="images/activity-8.jpg" alt="Activity 8"></div>
+          </div>
+        </div>
+        <button class="scroll-btn scroll-btn-right" onclick="scrollPhotos('wwd-photos', 1)" aria-label="Scroll right"><span>&#10095;</span></button>
+      </div>
+
       <div class="what-we-do-grid fade-in">
         <div class="wwd-card">
           <div class="wwd-icon">🤝</div>
-          <h3>Komunitas</h3>
-          <p>Membangun komunitas yang hangat dan kekeluargaan bagi mahasiswa Indonesia di KMITL.</p>
+          <h3 data-i18n="wwd.card1.title">Komunitas</h3>
+          <p data-i18n="wwd.card1.body">Membangun komunitas yang hangat dan kekeluargaan bagi mahasiswa Indonesia di KMITL.</p>
         </div>
         <div class="wwd-card">
           <div class="wwd-icon">📚</div>
-          <h3>Dukungan Akademik</h3>
-          <p>Berbagi informasi beasiswa, tips studi, dan panduan kehidupan kampus.</p>
+          <h3 data-i18n="wwd.card2.title">Dukungan Akademik</h3>
+          <p data-i18n="wwd.card2.body">Berbagi informasi beasiswa, tips studi, dan panduan kehidupan kampus.</p>
         </div>
         <div class="wwd-card">
           <div class="wwd-icon">🌏</div>
-          <h3>Jembatan Budaya</h3>
-          <p>Menjembatani budaya Indonesia dan Thailand melalui kegiatan dan kolaborasi.</p>
+          <h3 data-i18n="wwd.card3.title">Jembatan Budaya</h3>
+          <p data-i18n="wwd.card3.body">Menjembatani budaya Indonesia dan Thailand melalui kegiatan dan kolaborasi.</p>
         </div>
         <div class="wwd-card">
           <div class="wwd-icon">🔗</div>
-          <h3>Jejaring</h3>
-          <p>Terhubung dengan simpul PERMITHA di seluruh Thailand dan jaringan PPI Dunia.</p>
+          <h3 data-i18n="wwd.card4.title">Jejaring</h3>
+          <p data-i18n="wwd.card4.body">Terhubung dengan simpul PERMITHA di seluruh Thailand dan jaringan PPI Dunia.</p>
         </div>
       </div>
     </section>
@@ -116,51 +157,70 @@
     <!-- FUN FACTS -->
     <section class="fun-facts">
       <div class="fun-facts-header">
-        <h2>Fun Facts tentang KMITL</h2>
+        <h2 data-i18n="ff.title">Fun Facts tentang KMITL</h2>
         <div class="orange-line-sm"></div>
       </div>
+
+      <!-- KMITL Photo Gallery -->
+      <div class="photo-gallery">
+        <button class="scroll-btn scroll-btn-left" onclick="scrollPhotos('ff-photos', -1)" aria-label="Scroll left"><span>&#10094;</span></button>
+        <div class="photo-gallery-wrapper" id="ff-photos">
+          <div class="photo-gallery-row">
+            <div class="photo-gallery-item"><img src="images/kmitl-1.jpg" alt="KMITL Campus 1"></div>
+            <div class="photo-gallery-item"><img src="images/kmitl-2.jpg" alt="KMITL Campus 2"></div>
+            <div class="photo-gallery-item"><img src="images/kmitl-3.jpg" alt="KMITL Campus 3"></div>
+            <div class="photo-gallery-item"><img src="images/kmitl-4.jpg" alt="KMITL Campus 4"></div>
+            <div class="photo-gallery-item"><img src="images/kmitl-5.jpg" alt="KMITL Campus 5"></div>
+            <div class="photo-gallery-item"><img src="images/kmitl-6.jpg" alt="KMITL Campus 6"></div>
+            <div class="photo-gallery-item"><img src="images/kmitl-7.jpg" alt="KMITL Campus 7"></div>
+            <div class="photo-gallery-item"><img src="images/kmitl-8.jpg" alt="KMITL Campus 8"></div>
+          </div>
+        </div>
+        <button class="scroll-btn scroll-btn-right" onclick="scrollPhotos('ff-photos', 1)" aria-label="Scroll right"><span>&#10095;</span></button>
+      </div>
+
       <div class="fun-facts-scroll fade-in">
         <div class="ff-card">
           <div class="ff-emoji">🏛️</div>
-          <h3>Berdiri Sejak 1960</h3>
-          <p>Salah satu institusi sains dan teknologi tertua di Thailand.</p>
+          <h3 data-i18n="ff.card1.title">Berdiri Sejak 1960</h3>
+          <p data-i18n="ff.card1.body">Salah satu institusi sains dan teknologi tertua di Thailand.</p>
         </div>
         <div class="ff-card">
           <div class="ff-emoji">👑</div>
-          <h3>Nama Raja Mongkut</h3>
-          <p>Dinamai Raja Mongkut (Rama IV) — Bapak Ilmu Pengetahuan Thailand.</p>
+          <h3 data-i18n="ff.card2.title">Nama Raja Mongkut</h3>
+          <p data-i18n="ff.card2.body">Dinamai Raja Mongkut (Rama IV) — Bapak Ilmu Pengetahuan Thailand.</p>
         </div>
         <div class="ff-card">
           <div class="ff-emoji">🔭</div>
-          <h3>Astronom Kerajaan</h3>
-          <p>Raja Mongkut memprediksi gerhana matahari 1868 dengan akurat.</p>
+          <h3 data-i18n="ff.card3.title">Astronom Kerajaan</h3>
+          <p data-i18n="ff.card3.body">Raja Mongkut memprediksi gerhana matahari 1868 dengan akurat.</p>
         </div>
         <div class="ff-card">
           <div class="ff-emoji">📍</div>
-          <h3>Distrik Ladkrabang</h3>
-          <p>Area yang lebih tenang dan terjangkau dibanding pusat Bangkok.</p>
+          <h3 data-i18n="ff.card4.title">Distrik Ladkrabang</h3>
+          <p data-i18n="ff.card4.body">Area yang lebih tenang dan terjangkau dibanding pusat Bangkok.</p>
         </div>
         <div class="ff-card">
           <div class="ff-emoji">🌍</div>
-          <h3>Kampus Internasional</h3>
-          <p>Ribuan mahasiswa internasional dari seluruh Asia.</p>
+          <h3 data-i18n="ff.card5.title">Kampus Internasional</h3>
+          <p data-i18n="ff.card5.body">Ribuan mahasiswa internasional dari seluruh Asia.</p>
         </div>
         <div class="ff-card">
           <div class="ff-emoji">🛫</div>
-          <h3>Dekat Bandara</h3>
-          <p>Hanya ~15 menit dari Bandara Internasional Suvarnabhumi.</p>
+          <h3 data-i18n="ff.card6.title">Dekat Bandara</h3>
+          <p data-i18n="ff.card6.body">Hanya ~15 menit dari Bandara Internasional Suvarnabhumi.</p>
         </div>
       </div>
     </section>
 
     <!-- CTA BANNER -->
     <section class="cta-banner">
-      <h2>Tetap Terhubung</h2>
-      <p>Ikuti perkembangan terbaru PERMITHA KMITL</p>
+      <h2 data-i18n="cta.title">Tetap Terhubung</h2>
+      <p data-i18n="cta.sub">Ikuti perkembangan terbaru PERMITHA KMITL</p>
       <div class="cta-buttons">
-        <a href="https://instagram.com/permitha.kmitl" target="_blank" rel="noopener noreferrer" class="btn btn-white-outlined" aria-label="Instagram">📸 Instagram</a>
-        <a href="mailto:permithakmitl@gmail.com" class="btn btn-white-outlined" aria-label="Email">✉️ Email</a>
-        <a href="https://wa.me/6283856838811" target="_blank" rel="noopener noreferrer" class="btn btn-white-outlined" aria-label="WhatsApp">💬 WhatsApp</a>
+        <a href="https://instagram.com/permitha.kmitl" target="_blank" rel="noopener noreferrer" class="btn btn-white-outlined" aria-label="Instagram" data-i18n="cta.instagram">📸 Instagram</a>
+        <a href="mailto:permithakmitl@gmail.com" class="btn btn-white-outlined" aria-label="Email" data-i18n="cta.email">✉️ Email</a>
+        <a href="https://wa.me/6283856838811" target="_blank" rel="noopener noreferrer" class="btn btn-white-outlined" aria-label="WhatsApp" data-i18n="cta.whatsapp">💬 WhatsApp</a>
       </div>
     </section>
   </main>
@@ -171,19 +231,19 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="navbar-brand">PERMITHA KMITL</a>
-          <p class="footer-tagline">Keluarga kecil di tempat asing, bersatu dalam satu ruang kolaborasi.</p>
+          <p class="footer-tagline" data-i18n="footer.tagline">Keluarga kecil di tempat asing, bersatu dalam satu ruang kolaborasi.</p>
         </div>
         <div>
-          <div class="footer-label">Navigasi</div>
+          <div class="footer-label" data-i18n="footer.nav">Navigasi</div>
           <div class="footer-links">
-            <a href="index.html">About</a>
-            <a href="https://www.kmitl.ac.th/" target="_blank" rel="noopener noreferrer">Campus</a>
-            <a href="info-scholarship.html">Info &amp; Scholarship</a>
-            <a href="news.html">News</a>
+            <a href="index.html" data-i18n="nav.about">Tentang Kami</a>
+            <a href="https://www.kmitl.ac.th/" target="_blank" rel="noopener noreferrer" data-i18n="nav.campus">Kampus Kami</a>
+            <a href="info-scholarship.html" data-i18n="nav.info">Info &amp; Beasiswa</a>
+            <a href="news.html" data-i18n="nav.news">Berita</a>
           </div>
         </div>
         <div>
-          <div class="footer-label">Kontak</div>
+          <div class="footer-label" data-i18n="footer.contact">Kontak</div>
           <div class="footer-contact">
             <a href="mailto:permithakmitl@gmail.com">permithakmitl@gmail.com</a>
             <a href="https://instagram.com/permitha.kmitl" target="_blank" rel="noopener noreferrer">@permitha.kmitl</a>
@@ -191,7 +251,7 @@
           </div>
         </div>
         <div>
-          <div class="footer-label">Ikuti Kami</div>
+          <div class="footer-label" data-i18n="footer.social">Ikuti Kami</div>
           <div class="footer-social">
             <a href="https://instagram.com/permitha.kmitl" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸</a>
             <a href="https://wa.me/6283856838811" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a>
@@ -199,12 +259,13 @@
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
+      <div class="footer-bottom" data-i18n="footer.copyright">
         © 2025 PERMITHA KMITL · Perhimpunan Pelajar Indonesia di Thailand
       </div>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
