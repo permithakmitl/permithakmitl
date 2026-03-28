@@ -13,50 +13,65 @@
     <div class="container">
       <a href="index.html" class="navbar-brand">PERMITHA KMITL</a>
       <div class="nav-links">
-        <a href="index.html">About</a>
-        <a href="https://www.kmitl.ac.th/" target="_blank" rel="noopener noreferrer">Campus</a>
+        <a href="index.html" data-i18n="nav.about">Tentang Kami</a>
         <div class="nav-dropdown">
-          <a href="info-scholarship.html" class="nav-dropdown-trigger">Info &amp; Scholarship</a>
+          <a href="info-scholarship.html" class="nav-dropdown-trigger" data-i18n="nav.info">Info &amp; Beasiswa</a>
           <div class="nav-dropdown-menu">
-            <a href="info-scholarship.html#admission">Admission</a>
-            <a href="info-scholarship.html#scholarship">Scholarship</a>
-            <a href="info-scholarship.html#faculty">Faculty &amp; Department</a>
-            <a href="info-scholarship.html#downloads">Downloadable Files</a>
-            <a href="info-scholarship.html#faq">FAQ</a>
+            <a href="info-scholarship.html#admission" data-i18n="dropdown.admission">Pendaftaran</a>
+            <a href="info-scholarship.html#scholarship" data-i18n="dropdown.scholarship">Beasiswa</a>
+            <a href="info-scholarship.html#faculty" data-i18n="dropdown.faculty">Fakultas &amp; Jurusan</a>
+            <a href="info-scholarship.html#downloads" data-i18n="dropdown.downloads">Berkas Unduhan</a>
+            <a href="info-scholarship.html#faq" data-i18n="dropdown.faq">FAQ</a>
           </div>
         </div>
-        <a href="news.html">News</a>
+        <a href="news.html" data-i18n="nav.news">Berita</a>
+        <a href="https://www.kmitl.ac.th/" target="_blank" rel="noopener noreferrer" data-i18n="nav.campus">Kampus Kami</a>
+        <div class="lang-switcher-wrapper">
+          <button class="lang-switcher-btn" onclick="toggleLangDropdown(event)" aria-label="Change language">
+            <span id="active-flag">🇮🇩</span>
+          </button>
+          <div class="lang-dropdown" id="lang-dropdown">
+            <button class="lang-option" onclick="switchLanguage('id')"><span class="lang-flag-small">🇮🇩</span> Bahasa Indonesia</button>
+            <button class="lang-option" onclick="switchLanguage('en')"><span class="lang-flag-small">🇺🇸</span> English</button>
+            <button class="lang-option" onclick="switchLanguage('th')"><span class="lang-flag-small">🇹🇭</span> ภาษาไทย</button>
+          </div>
+        </div>
       </div>
       <button class="hamburger" aria-label="Open menu">☰</button>
     </div>
     <div class="mobile-menu">
-      <a href="index.html">About</a>
-      <a href="https://www.kmitl.ac.th/" target="_blank" rel="noopener noreferrer">Campus</a>
-      <a href="#" class="mobile-dropdown-toggle">Info &amp; Scholarship</a>
+      <a href="index.html" data-i18n="nav.about">Tentang Kami</a>
+      <a href="#" class="mobile-dropdown-toggle" data-i18n="nav.info">Info &amp; Beasiswa</a>
       <div class="mobile-dropdown-items">
-        <a href="info-scholarship.html#admission">Admission</a>
-        <a href="info-scholarship.html#scholarship">Scholarship</a>
-        <a href="info-scholarship.html#faculty">Faculty &amp; Department</a>
-        <a href="info-scholarship.html#downloads">Downloadable Files</a>
-        <a href="info-scholarship.html#faq">FAQ</a>
+        <a href="info-scholarship.html#admission" data-i18n="dropdown.admission">Pendaftaran</a>
+        <a href="info-scholarship.html#scholarship" data-i18n="dropdown.scholarship">Beasiswa</a>
+        <a href="info-scholarship.html#faculty" data-i18n="dropdown.faculty">Fakultas &amp; Jurusan</a>
+        <a href="info-scholarship.html#downloads" data-i18n="dropdown.downloads">Berkas Unduhan</a>
+        <a href="info-scholarship.html#faq" data-i18n="dropdown.faq">FAQ</a>
       </div>
-      <a href="news.html">News</a>
+      <a href="news.html" data-i18n="nav.news">Berita</a>
+      <a href="https://www.kmitl.ac.th/" target="_blank" rel="noopener noreferrer" data-i18n="nav.campus">Kampus Kami</a>
+      <div class="mobile-lang-switcher">
+        <button onclick="switchLanguage('id')">🇮🇩 ID</button>
+        <button onclick="switchLanguage('en')">🇺🇸 EN</button>
+        <button onclick="switchLanguage('th')">🇹🇭 TH</button>
+      </div>
     </div>
   </nav>
 
   <main>
     <div class="news-page">
       <div class="news-header">
-        <h2>News &amp; Updates</h2>
-        <p>Kabar terkini dari PERMITHA KMITL</p>
+        <h2 data-i18n="news.title">Berita &amp; Pembaruan</h2>
+        <p data-i18n="news.sub">Kabar terkini dari PERMITHA KMITL</p>
       </div>
 
       <!-- Empty State -->
       <div class="news-empty">
         <div class="news-empty-circle">📰</div>
-        <h3>Segera Hadir</h3>
-        <p>Nantikan update terbaru dari PERMITHA KMITL.</p>
-        <a href="https://instagram.com/permitha.kmitl" target="_blank" rel="noopener noreferrer" class="btn btn-filled">Follow Instagram Kami</a>
+        <h3 data-i18n="news.empty.title">Segera Hadir</h3>
+        <p data-i18n="news.empty.sub">Nantikan update terbaru dari PERMITHA KMITL.</p>
+        <a href="https://instagram.com/permitha.kmitl" target="_blank" rel="noopener noreferrer" class="btn btn-filled" data-i18n="news.empty.cta">Follow Instagram Kami</a>
       </div>
 
       <!-- Placeholder News Grid -->
@@ -64,28 +79,28 @@
         <div class="news-skeleton">
           <div class="news-skeleton-img"></div>
           <div class="news-skeleton-body">
-            <span class="news-date-pill">— 2025</span>
-            <h3>Judul Artikel — Segera Hadir</h3>
-            <p>Konten berita akan segera tersedia. Pantau Instagram kami untuk update terbaru.</p>
-            <span class="news-read-more">Selengkapnya →</span>
+            <span class="news-date-pill" data-i18n="news.skeleton.date">— 2025</span>
+            <h3 data-i18n="news.skeleton.title">Judul Artikel — Segera Hadir</h3>
+            <p data-i18n="news.skeleton.body">Konten berita akan segera tersedia. Pantau Instagram kami untuk update terbaru.</p>
+            <span class="news-read-more" data-i18n="news.skeleton.more">Selengkapnya →</span>
           </div>
         </div>
         <div class="news-skeleton">
           <div class="news-skeleton-img"></div>
           <div class="news-skeleton-body">
-            <span class="news-date-pill">— 2025</span>
-            <h3>Judul Artikel — Segera Hadir</h3>
-            <p>Konten berita akan segera tersedia. Pantau Instagram kami untuk update terbaru.</p>
-            <span class="news-read-more">Selengkapnya →</span>
+            <span class="news-date-pill" data-i18n="news.skeleton.date">— 2025</span>
+            <h3 data-i18n="news.skeleton.title">Judul Artikel — Segera Hadir</h3>
+            <p data-i18n="news.skeleton.body">Konten berita akan segera tersedia. Pantau Instagram kami untuk update terbaru.</p>
+            <span class="news-read-more" data-i18n="news.skeleton.more">Selengkapnya →</span>
           </div>
         </div>
         <div class="news-skeleton">
           <div class="news-skeleton-img"></div>
           <div class="news-skeleton-body">
-            <span class="news-date-pill">— 2025</span>
-            <h3>Judul Artikel — Segera Hadir</h3>
-            <p>Konten berita akan segera tersedia. Pantau Instagram kami untuk update terbaru.</p>
-            <span class="news-read-more">Selengkapnya →</span>
+            <span class="news-date-pill" data-i18n="news.skeleton.date">— 2025</span>
+            <h3 data-i18n="news.skeleton.title">Judul Artikel — Segera Hadir</h3>
+            <p data-i18n="news.skeleton.body">Konten berita akan segera tersedia. Pantau Instagram kami untuk update terbaru.</p>
+            <span class="news-read-more" data-i18n="news.skeleton.more">Selengkapnya →</span>
           </div>
         </div>
       </div>
@@ -98,19 +113,19 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="navbar-brand">PERMITHA KMITL</a>
-          <p class="footer-tagline">Keluarga kecil di tempat asing, bersatu dalam satu ruang kolaborasi.</p>
+          <p class="footer-tagline" data-i18n="footer.tagline">Keluarga kecil di tempat asing, bersatu dalam satu ruang kolaborasi.</p>
         </div>
         <div>
-          <div class="footer-label">Navigasi</div>
+          <div class="footer-label" data-i18n="footer.nav">Navigasi</div>
           <div class="footer-links">
-            <a href="index.html">About</a>
-            <a href="https://www.kmitl.ac.th/" target="_blank" rel="noopener noreferrer">Campus</a>
-            <a href="info-scholarship.html">Info &amp; Scholarship</a>
-            <a href="news.html">News</a>
+            <a href="index.html" data-i18n="nav.about">Tentang Kami</a>
+            <a href="https://www.kmitl.ac.th/" target="_blank" rel="noopener noreferrer" data-i18n="nav.campus">Kampus Kami</a>
+            <a href="info-scholarship.html" data-i18n="nav.info">Info &amp; Beasiswa</a>
+            <a href="news.html" data-i18n="nav.news">Berita</a>
           </div>
         </div>
         <div>
-          <div class="footer-label">Kontak</div>
+          <div class="footer-label" data-i18n="footer.contact">Kontak</div>
           <div class="footer-contact">
             <a href="mailto:permithakmitl@gmail.com">permithakmitl@gmail.com</a>
             <a href="https://instagram.com/permitha.kmitl" target="_blank" rel="noopener noreferrer">@permitha.kmitl</a>
@@ -118,7 +133,7 @@
           </div>
         </div>
         <div>
-          <div class="footer-label">Ikuti Kami</div>
+          <div class="footer-label" data-i18n="footer.social">Ikuti Kami</div>
           <div class="footer-social">
             <a href="https://instagram.com/permitha.kmitl" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸</a>
             <a href="https://wa.me/6283856838811" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a>
@@ -126,12 +141,13 @@
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
+      <div class="footer-bottom" data-i18n="footer.copyright">
         © 2025 PERMITHA KMITL · Perhimpunan Pelajar Indonesia di Thailand
       </div>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

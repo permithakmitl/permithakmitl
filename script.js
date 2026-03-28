@@ -169,3 +169,17 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+
+// ===================================
+// PHOTO GALLERY SCROLL
+// ===================================
+function scrollPhotos(wrapperId, direction) {
+  var wrapper = document.getElementById(wrapperId);
+  if (wrapper) {
+    var scrollAmount = wrapper.clientWidth * 0.8;
+    wrapper.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+}
