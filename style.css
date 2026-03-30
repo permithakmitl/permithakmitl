@@ -1388,8 +1388,8 @@ button {
 }
 
 .logo-frame {
-  width: 800px;
-  height: 800px;
+  width: 400px;
+  height: 400px;
   border-radius: var(--radius-md);
   border: 2px dashed var(--border);
   background: var(--gray-light);
@@ -1409,8 +1409,8 @@ button {
 
 @media (max-width: 992px) {
   .logo-frame {
-    width: 600px;
-    height: 600px;
+    width: 300px;
+    height: 300px;
   }
 }
 
@@ -1422,15 +1422,15 @@ button {
   }
 
   .logo-frame {
-    width: 400px;
-    height: 400px;
+    width: 220px;
+    height: 220px;
   }
 }
 
 @media (max-width: 480px) {
   .logo-frame {
-    width: 300px;
-    height: 300px;
+    width: 160px;
+    height: 160px;
   }
 }
 
