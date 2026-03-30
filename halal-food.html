@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News &amp; Updates — PERMITHA KMITL</title>
+  <title>Halal Food & Place — PERMITHA KMITL</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -62,48 +62,31 @@
   </nav>
 
   <main>
-    <div class="news-page">
-      <div class="news-header">
-        <h2 data-i18n="news.title">Berita &amp; Pembaruan</h2>
-        <p data-i18n="news.sub">Kabar terkini dari PERMITHA KMITL</p>
-      </div>
+    <div class="halal-page">
+      <div class="container">
+        <h1 class="halal-page-title" data-i18n="halal.title">Makanan & Tempat Halal</h1>
+        <p class="halal-page-subtitle" data-i18n="halal.sub">Daftar tempat makan halal yang direkomendasikan di sekitar KMITL dan Bangkok</p>
 
-      <!-- Empty State -->
-      <div class="news-empty">
-        <div class="news-empty-circle">📰</div>
-        <h3 data-i18n="news.empty.title">Segera Hadir</h3>
-        <p data-i18n="news.empty.sub">Nantikan update terbaru dari PERMITHA KMITL.</p>
-        <a href="https://instagram.com/permitha.kmitl" target="_blank" rel="noopener noreferrer" class="btn btn-filled" data-i18n="news.empty.cta">Follow Instagram Kami</a>
-      </div>
-
-      <!-- Placeholder News Grid -->
-      <div class="news-grid">
-        <div class="news-skeleton">
-          <div class="news-skeleton-img"></div>
-          <div class="news-skeleton-body">
-            <span class="news-date-pill" data-i18n="news.skeleton.date">— 2025</span>
-            <h3 data-i18n="news.skeleton.title">Judul Artikel — Segera Hadir</h3>
-            <p data-i18n="news.skeleton.body">Konten berita akan segera tersedia. Pantau Instagram kami untuk update terbaru.</p>
-            <span class="news-read-more" data-i18n="news.skeleton.more">Selengkapnya →</span>
+        <!-- Top Controls: Pagination + Search -->
+        <div class="halal-top-controls">
+          <div id="halal-nav-top" class="halal-nav-top">
+            <!-- Pagination buttons rendered by JS -->
+          </div>
+          <div class="halal-search-container">
+            <input type="text" id="halal-search" class="halal-search-input" placeholder="Cari tempat makan..." data-i18n-placeholder="halal.searchPlaceholder">
           </div>
         </div>
-        <div class="news-skeleton">
-          <div class="news-skeleton-img"></div>
-          <div class="news-skeleton-body">
-            <span class="news-date-pill" data-i18n="news.skeleton.date">— 2025</span>
-            <h3 data-i18n="news.skeleton.title">Judul Artikel — Segera Hadir</h3>
-            <p data-i18n="news.skeleton.body">Konten berita akan segera tersedia. Pantau Instagram kami untuk update terbaru.</p>
-            <span class="news-read-more" data-i18n="news.skeleton.more">Selengkapnya →</span>
+
+        <!-- Listing Area -->
+        <div class="halal-scroll-area">
+          <div id="halal-grid" class="halal-grid">
+            <!-- Cards rendered by JavaScript -->
           </div>
         </div>
-        <div class="news-skeleton">
-          <div class="news-skeleton-img"></div>
-          <div class="news-skeleton-body">
-            <span class="news-date-pill" data-i18n="news.skeleton.date">— 2025</span>
-            <h3 data-i18n="news.skeleton.title">Judul Artikel — Segera Hadir</h3>
-            <p data-i18n="news.skeleton.body">Konten berita akan segera tersedia. Pantau Instagram kami untuk update terbaru.</p>
-            <span class="news-read-more" data-i18n="news.skeleton.more">Selengkapnya →</span>
-          </div>
+
+        <!-- Bottom Pagination -->
+        <div id="halal-pagination-bottom" class="halal-pagination">
+          <!-- Page buttons rendered by JS -->
         </div>
       </div>
     </div>
@@ -151,6 +134,7 @@
   </footer>
 
   <script src="i18n.js"></script>
+  <script src="halal-food.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -86,6 +86,18 @@
             } catch (e) {}
         }
 
+        // Handle data-i18n-placeholder for search inputs etc.
+        var placeholderEls = document.querySelectorAll('[data-i18n-placeholder]');
+        for (var j = 0; j < placeholderEls.length; j++) {
+            try {
+                var pEl = placeholderEls[j];
+                var pKey = pEl.getAttribute('data-i18n-placeholder');
+                if (data[pKey] !== undefined) {
+                    pEl.setAttribute('placeholder', data[pKey]);
+                }
+            } catch (e) {}
+        }
+
         document.documentElement.lang = currentLang;
     }
 
