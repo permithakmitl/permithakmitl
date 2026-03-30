@@ -1378,7 +1378,7 @@ button {
    =================================== */
 .logo-frames {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 32px;
   margin-bottom: 40px;
   max-width: 1100px;
@@ -1388,8 +1388,8 @@ button {
 }
 
 .logo-frame {
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   border-radius: var(--radius-md);
   border: 2px dashed var(--border);
   background: var(--gray-light);
@@ -1409,8 +1409,8 @@ button {
 
 @media (max-width: 992px) {
   .logo-frame {
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
   }
 }
 
@@ -1418,19 +1418,19 @@ button {
   .logo-frames {
     gap: 20px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .logo-frame {
-    width: 220px;
-    height: 220px;
+    width: 120px;
+    height: 120px;
   }
 }
 
 @media (max-width: 480px) {
   .logo-frame {
-    width: 160px;
-    height: 160px;
+    width: 90px;
+    height: 90px;
   }
 }
 
