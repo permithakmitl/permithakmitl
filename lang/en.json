@@ -148,5 +148,15 @@
     "subnav.scholarship": "Scholarship",
     "subnav.faculty": "Faculty & Department",
     "subnav.downloads": "Downloadable Files",
-    "subnav.faq": "FAQ"
+    "subnav.faq": "FAQ",
+
+    "nav.halal": "Halal Food & Place",
+    "halal.title": "Halal Food & Place",
+    "halal.sub": "Recommended halal food places around KMITL and Bangkok",
+    "halal.searchPlaceholder": "Search places...",
+    "halal.prevBtn": "← Previous",
+    "halal.nextBtn": "Next →",
+    "halal.noResults": "No results found. Try a different keyword.",
+    "halal.noResultsTitle": "Not Found",
+    "halal.mapLink": "🗺️ Google Maps"
 }

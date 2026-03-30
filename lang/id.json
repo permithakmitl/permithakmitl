@@ -148,5 +148,15 @@
     "subnav.scholarship": "Beasiswa",
     "subnav.faculty": "Fakultas & Jurusan",
     "subnav.downloads": "Berkas Unduhan",
-    "subnav.faq": "FAQ"
+    "subnav.faq": "FAQ",
+
+    "nav.halal": "Makanan & Tempat Halal",
+    "halal.title": "Makanan & Tempat Halal",
+    "halal.sub": "Daftar tempat makan halal yang direkomendasikan di sekitar KMITL dan Bangkok",
+    "halal.searchPlaceholder": "Cari tempat makan...",
+    "halal.prevBtn": "← Sebelumnya",
+    "halal.nextBtn": "Berikutnya →",
+    "halal.noResults": "Tidak ada hasil ditemukan. Coba kata kunci lain.",
+    "halal.noResultsTitle": "Tidak Ditemukan",
+    "halal.mapLink": "🗺️ Google Maps"
 }

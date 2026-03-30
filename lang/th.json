@@ -148,5 +148,15 @@
     "subnav.scholarship": "ทุนการศึกษา",
     "subnav.faculty": "คณะและภาควิชา",
     "subnav.downloads": "ไฟล์ดาวน์โหลด",
-    "subnav.faq": "คำถามที่พบบ่อย"
+    "subnav.faq": "คำถามที่พบบ่อย",
+
+    "nav.halal": "อาหารและสถานที่ฮาลาล",
+    "halal.title": "อาหารและสถานที่ฮาลาล",
+    "halal.sub": "รายชื่อร้านอาหารฮาลาลแนะนำใกล้ สจล. และกรุงเทพฯ",
+    "halal.searchPlaceholder": "ค้นหาร้านอาหาร...",
+    "halal.prevBtn": "← ก่อนหน้า",
+    "halal.nextBtn": "ถัดไป →",
+    "halal.noResults": "ไม่พบผลลัพธ์ ลองใช้คำค้นหาอื่น",
+    "halal.noResultsTitle": "ไม่พบ",
+    "halal.mapLink": "🗺️ Google Maps"
 }
